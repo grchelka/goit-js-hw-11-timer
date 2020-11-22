@@ -33,6 +33,11 @@ body {
   border-radius: 3px;
   background: darkgrey;
   display: inline-block;
+  margin-right: 12px;
+}
+
+.filed:last-child {
+  margin-right: 0;
 }
 
 .value {
