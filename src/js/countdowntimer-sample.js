@@ -1,9 +1,19 @@
 export default class CountdownTimer {
-  constructor({ selector, targetDate, onTick, elements }) {
+  constructor({ selector, targetDate, onTick }) {
     this.intervalId = null;
     this.targetDate = targetDate;
     this.onTick = onTick;
-    this.elements = elements;
+    this.targetDate = new Date(targetDate);
+    this.days = document.querySelector(`${selector} .value[data-value="days"]`);
+    this.hours = document.querySelector(
+      `${selector} .value[data-value="hours"]`
+    );
+    this.minutes = document.querySelector(
+      `${selector} .value[data-value="mins"]`
+    );
+    this.seconds = document.querySelector(
+      `${selector} .value[data-value="secs"]`
+    );
   }
   start() {
     this.intervalId = setInterval(() => {

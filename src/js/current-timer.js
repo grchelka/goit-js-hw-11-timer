@@ -1,4 +1,3 @@
-import CountdownTimerElements from "./timer-elements-sample";
 import CountdownTimer from "./countdowntimer-sample";
 
 const refs = {
@@ -8,12 +7,10 @@ const refs = {
   secs: document.querySelector('span[data-value="secs"]'),
 };
 
-const timerElements = new CountdownTimerElements(refs);
 const timer = new CountdownTimer({
   selector: "#timer-1",
   targetDate: new Date("Dec 31, 2020"),
   onTick: updateClockface,
-  timerElements,
 });
 
 function updateClockface({ days, hours, mins, secs }) {
